@@ -1,0 +1,92 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+<bootstrap4mix = 'http://www.jahia.org/bootstrap4/mix/1.0'>
+<mix = 'http://www.jcp.org/jcr/mix/1.0'>
+<smont = 'http://www.jahia.org/smo/nt/1.0'>
+<smomix = 'http://www.jahia.org/smo/mix/1.0'>
+
+[smomix:smoComponent] > jmix:droppableContent, jmix:editorialContent mixin
+
+[smont:smoGalleryImg] > jnt:content, mix:title
+ - jcr:title (string) internationalized
+ - image (weakreference, picker[type='image']) < 'jmix:image'
+
+[smont:smoNews] > jnt:content, mix:title, smomix:linkTo, smomix:smoComponent
+ - jcr:title (string) internationalized mandatory
+ - desc (string, richtext) internationalized
+ - date (date) = now()
+ - buttonText (string) internationalized
+ - smoGalleryImg (weakreference, picker[type='image']) multiple i18n
+
+//*** CONTENT LINKER //
+[smomix:linkTo] mixin
+// - linkType (string, choicelist[smoLinkTypeInitializer,resourceBundle]) = 'internalLink' autocreated indexed=no < 'internalLink', 'externalLink', 'self'
+ - linkType (string, choicelist[smoLinkTypeInitializer,resourceBundle]) indexed=no < 'internalLink', 'externalLink', 'self'
+ - linkTarget (string, choicelist[resourceBundle]) = _blank autocreated indexed=no < '_blank', '_self', '_parent', '_top'
+
+[smomix:internalLink] > jmix:templateMixin mixin
+ extends = smomix:linkTo
+ - internalLink (weakreference, picker[type='editoriallink']) < 'jmix:droppableContent', 'jnt:page', 'jnt:file'
+
+[smomix:externalLink] > jmix:templateMixin mixin
+ extends = smomix:linkTo
+ - externalLink (string) = 'https://'
+// CONTENT LINKER ***//
+
+[smont:smoInternalVideo] > jnt:content, mix:title
+ - video (weakreference, picker[type='file']) i18n
+ - videoPoster (weakreference, picker[type='image']) < 'jmix:image'
+
+[smont:smoExternalVideo] > jnt:content, mix:title
+ - videoService(string, choicelist[resourceBundle]) = 'youtube' mandatory < youtube, vimeo
+ - videoId (string) i18n
+ - videoPoster (weakreference, picker[type='image']) < 'jmix:image'
+
+[smont:homeBannerVideo] > jnt:content, mix:title, smomix:smoComponent, jmix:list
+ - bannerText (string, richtext) internationalized
+ - itemWidth (long) = 250 indexed=no mandatory
+ + * (smont:smoInternalVideo)
+ + * (smont:smoExternalVideo)
+
+[smont:blockInternalLink] > jnt:content, mix:title
+- internalLink (weakreference, picker[type='editoriallink']) < 'jmix:droppableContent', 'jnt:page', 'jnt:file'
+- linkTarget (string, choicelist[resourceBundle]) = _blank autocreated indexed=no < '_blank', '_self', '_parent', '_top'
+
+[smont:blockExternalLink] > jnt:content, mix:title
+ - externalLink (string) = 'https://'
+ - linkTarget (string, choicelist[resourceBundle]) = _blank autocreated indexed=no < '_blank', '_self', '_parent', '_top'
+
+[smont:linksBlock] > jnt:content, mix:title, smomix:smoComponent, smomix:linkTo, jmix:list
+ - buttonText (string) internationalized
+ + * (smont:blockInternalLink)
+ + * (smont:blockExternalLink)
+
+
+[smont:smoFreeBlock] > jnt:content, mix:title, smomix:linkTo, smomix:smoComponent
+ - jcr:title (string) internationalized
+ - desc (string, richtext) internationalized
+ - buttonText (string) internationalized
+ - buttonColor (string, choicelist[resourceBundle]) = 'text-primary' indexed=no < 'text-primary', 'text-secondary', 'text-success', 'text-danger', 'text-warning', 'text-info', 'text-light', 'text-dark', 'text-white'
+ - textColor (string, choicelist[resourceBundle]) = 'text-primary' indexed=no < 'text-primary', 'text-secondary', 'text-success', 'text-danger', 'text-warning', 'text-info', 'text-light', 'text-dark', 'text-white'
+ - backgroundColor (string) = '#FF8200'
+
+[smont:dashboardBannerVideo] > jnt:content, mix:title, smomix:smoComponent, jmix:list
+ - bannerText (string, richtext) internationalized
+ - itemWidth (long) = 250 indexed=no mandatory
+ + * (smont:smoFreeBlock)
+ + * (smont:smoInternalVideo)
+ + * (smont:smoExternalVideo)
+
+[smont:standardCard] > jnt:content, mix:title, smomix:linkTo, smomix:smoComponent
+ - jcr:title (string) internationalized
+ - cardText (string, richtext) internationalized
+ - buttonText (string) internationalized
+ - cardImage (weakreference, picker[type='image']) < 'jmix:image'
+ - cardBodyColor (string) = '#FF8200'
+
+[smomix:featuredMenu] mixin
+ extends = jnt:page
+ itemtype = content
+ - featuredTitle (string) i18n
+ - featuredImage (weakreference, picker[type='image']) < 'jmix:image'
+ - featuredText (string, richtext) internationalized
