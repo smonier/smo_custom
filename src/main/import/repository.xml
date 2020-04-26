@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0">
+   <modules jcr:primaryType="jnt:modules">
+      <smo-custom j:dependencies="bootstrap4-components bootstrap4-core cloudinary-integration default"
+                  j:modulePriority="0"
+                  j:moduleType="module"
+                  j:title="smo-custom"
+                  jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                  jcr:primaryType="jnt:module">
+         <sources jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                  jcr:primaryType="jnt:moduleVersionFolder"
+                  j:staticMountPointProviderKey="module-smo-custom-1.0-SNAPSHOT">
+            <pom.xml jcr:primaryType="jnt:xmlFile"/>
+            <src jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                 jcr:primaryType="jnt:folder">
+               <main jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                     jcr:primaryType="jnt:folder">
+                  <resources jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                             jcr:primaryType="jnt:folder">
+                     <jnt_mainContent jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                                      jcr:primaryType="jnt:nodeTypeFolder">
+                        <html jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                              jcr:primaryType="jnt:templateTypeFolder">
+                           <mainContent.card.jsp jcr:primaryType="jnt:viewFile"/>
+                        </html>
+                     </jnt_mainContent>
+                     <META-INF jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                               jcr:primaryType="jnt:metaInfFolder">
+                        <definitions.cnd jcr:primaryType="jnt:definitionFile"/>
+                     </META-INF>
+                     <jnt_news jcr:mixinTypes="jmix:hasExternalProviderExtension jmix:sourceControl"
+                               jcr:primaryType="jnt:nodeTypeFolder"
+                               scmStatus="modified">
+                        <html jcr:mixinTypes="jmix:hasExternalProviderExtension jmix:sourceControl"
+                              jcr:primaryType="jnt:templateTypeFolder"
+                              scmStatus="modified">
+                           <news.card-img-bottomtext.jsp jcr:mixinTypes="jmix:sourceControl"
+                                                         jcr:primaryType="jnt:viewFile"
+                                                         scmStatus="added"/>
+                           <news.card.jsp jcr:mixinTypes="jmix:sourceControl"
+                                          jcr:primaryType="jnt:viewFile"
+                                          scmStatus="added"/>
+                           <news.card-fulltext.jsp jcr:mixinTypes="jmix:sourceControl"
+                                                   jcr:primaryType="jnt:viewFile"
+                                                   scmStatus="added"/>
+                        </html>
+                     </jnt_news>
+                  </resources>
+               </main>
+            </src>
+         </sources>
+         <portlets jcr:primaryType="jnt:portletFolder"/>
+         <files jcr:primaryType="jnt:folder"/>
+         <contents jcr:primaryType="jnt:contentFolder"/>
+         <templates j:rootTemplatePath="/base" jcr:primaryType="jnt:templatesFolder">
+            <files jcr:primaryType="jnt:folder"/>
+            <contents jcr:primaryType="jnt:contentFolder"/>
+            <news j:applyOn="jnt:news"
+                  j:defaultTemplate="true"
+                  j:hiddenTemplate="false"
+                  j:priority="99999"
+                  jcr:primaryType="jnt:contentTemplate">
+               <j:translation_en jcr:language="en"
+                                 jcr:mixinTypes="mix:title"
+                                 jcr:primaryType="jnt:translation"
+                                 jcr:title="news"/>
+               <pagecontent jcr:primaryType="jnt:contentList">
+                  <heading-content-list jcr:primaryType="jnt:contentList">
+                     <j:translation_en jcr:language="en"
+                                       jcr:mixinTypes="mix:title"
+                                       jcr:primaryType="jnt:translation"
+                                       jcr:title="Heading content list"/>
+                     <heading jcr:primaryType="tint:heading">
+                        <j:translation_en body="&lt;h1 class=&#34;pt-5&#34;&gt;News&lt;/h1&gt;&#xA;"
+                                          jcr:language="en"
+                                          jcr:primaryType="jnt:translation"/>
+                        <j:translation_de body="&lt;h1 class=&#34;pt-5&#34;&gt;&lt;span&gt;About Us&lt;/span&gt;&lt;/h1&gt;&#xA;&#xA;&lt;p class=&#34;mb-5 w-75&#34;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sit, saepe? Rem, libero repellendus eum.&lt;/p&gt;&#xA;"
+                                          jcr:language="de"
+                                          jcr:primaryType="jnt:translation"/>
+                        <j:translation_pt body="&lt;h1 class=&#34;pt-5&#34;&gt;&lt;span&gt;About Us&lt;/span&gt;&lt;/h1&gt;&#xA;&#xA;&lt;p class=&#34;mb-5 w-75&#34;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sit, saepe? Rem, libero repellendus eum.&lt;/p&gt;&#xA;"
+                                          jcr:language="pt"
+                                          jcr:primaryType="jnt:translation"/>
+                        <j:translation_it body="&lt;h1 class=&#34;pt-5&#34;&gt;&lt;span&gt;About Us&lt;/span&gt;&lt;/h1&gt;&#xA;&#xA;&lt;p class=&#34;mb-5 w-75&#34;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sit, saepe? Rem, libero repellendus eum.&lt;/p&gt;&#xA;"
+                                          jcr:language="it"
+                                          jcr:primaryType="jnt:translation"/>
+                        <j:translation_fr body="&lt;h1 class=&#34;pt-5&#34;&gt;&lt;span&gt;About Us&lt;/span&gt;&lt;/h1&gt;&#xA;&#xA;&lt;p class=&#34;mb-5 w-75&#34;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sit, saepe? Rem, libero repellendus eum.&lt;/p&gt;&#xA;"
+                                          jcr:language="fr"
+                                          jcr:primaryType="jnt:translation"/>
+                        <j:translation_da body="&lt;h1 class=&#34;pt-5&#34;&gt;&lt;span&gt;About Us&lt;/span&gt;&lt;/h1&gt;&#xA;&#xA;&lt;p class=&#34;mb-5 w-75&#34;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sit, saepe? Rem, libero repellendus eum.&lt;/p&gt;&#xA;"
+                                          jcr:language="da"
+                                          jcr:primaryType="jnt:translation"/>
+                        <j:translation_es body="&lt;h1 class=&#34;pt-5&#34;&gt;&lt;span&gt;About Us&lt;/span&gt;&lt;/h1&gt;&#xA;&#xA;&lt;p class=&#34;mb-5 w-75&#34;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sit, saepe? Rem, libero repellendus eum.&lt;/p&gt;&#xA;"
+                                          jcr:language="es"
+                                          jcr:primaryType="jnt:translation"/>
+                        <j:translation_de_DE body="&lt;h1 class=&#34;pt-5&#34;&gt;&lt;span&gt;About Us&lt;/span&gt;&lt;/h1&gt;&#xA;&#xA;&lt;p class=&#34;mb-5 w-75&#34;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sit, saepe? Rem, libero repellendus eum.&lt;/p&gt;&#xA;"
+                                             jcr:language="de_DE"
+                                             jcr:primaryType="jnt:translation"/>
+                     </heading>
+                  </heading-content-list>
+                  <layout-and-grid grid="12"
+                                   gridLayout="fixed-width"
+                                   jcr:mixinTypes="bootstrap4mix:createContainer bootstrap4mix:createRow bootstrap4mix:createSection bootstrap4mix:predefinedGrid"
+                                   jcr:primaryType="bootstrap4nt:grid"
+                                   rowHorizontalAlignment="default"
+                                   rowVerticalAlignment="default"
+                                   sectionElement="section"
+                                   typeOfGrid="predefinedGrid">
+                     <layout-and-grid-main jcr:primaryType="jnt:contentList">
+                        <main-resource-display j:mainResourceView="card-fulltext"
+                                               jcr:primaryType="jnt:mainResourceDisplay"/>
+                     </layout-and-grid-main>
+                  </layout-and-grid>
+               </pagecontent>
+               <settings-template-link jcr:primaryType="jnt:templateLink"/>
+            </news>
+            <person-template j:applyOn="jnt:moviePerson"
+                             j:defaultTemplate="true"
+                             j:hiddenTemplate="false"
+                             j:priority="2"
+                             jcr:primaryType="jnt:contentTemplate">
+               <j:translation_en jcr:language="en"
+                                 jcr:mixinTypes="mix:title"
+                                 jcr:primaryType="jnt:translation"
+                                 jcr:title="person-template"/>
+               <pagecontent jcr:primaryType="jnt:contentList">
+                  <layout-and-grid grid="4_8"
+                                   gridLayout="fixed-width"
+                                   jcr:mixinTypes="bootstrap4mix:createContainer bootstrap4mix:createRow bootstrap4mix:createSection bootstrap4mix:predefinedGrid"
+                                   jcr:primaryType="bootstrap4nt:grid"
+                                   rowHorizontalAlignment="default"
+                                   rowVerticalAlignment="default"
+                                   sectionElement="section"
+                                   typeOfGrid="predefinedGrid">
+                     <layout-and-grid-side jcr:primaryType="jnt:contentList">
+                        <main-resource-display j:mainResourceView="picture" jcr:primaryType="jnt:mainResourceDisplay"/>
+                     </layout-and-grid-side>
+                     <layout-and-grid-main jcr:primaryType="jnt:contentList">
+                        <main-resource-display j:mainResourceView="default" jcr:primaryType="jnt:mainResourceDisplay"/>
+                     </layout-and-grid-main>
+                  </layout-and-grid>
+               </pagecontent>
+            </person-template>
+            <movie-template j:applyOn="jnt:movie"
+                            j:defaultTemplate="true"
+                            j:hiddenTemplate="false"
+                            j:priority="9999"
+                            jcr:primaryType="jnt:contentTemplate">
+               <j:translation_en jcr:language="en"
+                                 jcr:mixinTypes="mix:title"
+                                 jcr:primaryType="jnt:translation"
+                                 jcr:title="movie-template"/>
+               <pagecontent jcr:primaryType="jnt:contentList">
+                  <heading-content-list jcr:primaryType="jnt:contentList">
+                     <j:translation_en jcr:language="en"
+                                       jcr:mixinTypes="mix:title"
+                                       jcr:primaryType="jnt:translation"
+                                       jcr:title="Heading content list"/>
+                     <navbar-no-search addContainerWithinTheNavbar="true"
+                                       addLoginButton="false"
+                                       buttonClass="navbar-toggler"
+                                       divClass="collapse navbar-collapse"
+                                       j:view="industrial.no.search"
+                                       jcr:mixinTypes="bootstrap4mix:advancedNavbar bootstrap4mix:brand bootstrap4mix:customBaseNavbar bootstrap4mix:customButtonNavbar jmix:renderable"
+                                       jcr:primaryType="bootstrap4nt:navbar"
+                                       navClass="navbar navbar-expand-lg navbar-dark bg-dark"
+                                       recursive="true"
+                                       root="homePage"
+                                       ulClass="navbar-nav pl-md-5 ml-auto">
+                        <j:translation_en brandText="industrial"
+                                          jcr:language="en"
+                                          jcr:primaryType="jnt:translation"/>
+                        <j:translation_de brandText="industrial"
+                                          jcr:language="de"
+                                          jcr:primaryType="jnt:translation"/>
+                        <j:translation_pt brandText="industrial"
+                                          jcr:language="pt"
+                                          jcr:primaryType="jnt:translation"/>
+                        <j:translation_it brandText="industrial"
+                                          jcr:language="it"
+                                          jcr:primaryType="jnt:translation"/>
+                        <j:translation_fr brandText="industrial"
+                                          jcr:language="fr"
+                                          jcr:primaryType="jnt:translation"/>
+                        <j:translation_da brandText="industrial"
+                                          jcr:language="da"
+                                          jcr:primaryType="jnt:translation"/>
+                        <j:translation_es brandText="industrial"
+                                          jcr:language="es"
+                                          jcr:primaryType="jnt:translation"/>
+                        <j:translation_de_DE brandText="industrial"
+                                             jcr:language="de_DE"
+                                             jcr:primaryType="jnt:translation"/>
+                     </navbar-no-search>
+                     <heading jcr:primaryType="tint:heading">
+                        <j:translation_en body="&lt;h1 class=&#34;pt-5&#34;&gt;Movies&lt;/h1&gt;&#xA;"
+                                          jcr:language="en"
+                                          jcr:primaryType="jnt:translation"/>
+                        <j:translation_de body="&lt;h1 class=&#34;pt-5&#34;&gt;&lt;span&gt;About Us&lt;/span&gt;&lt;/h1&gt;&#xA;&#xA;&lt;p class=&#34;mb-5 w-75&#34;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sit, saepe? Rem, libero repellendus eum.&lt;/p&gt;&#xA;"
+                                          jcr:language="de"
+                                          jcr:primaryType="jnt:translation"/>
+                        <j:translation_pt body="&lt;h1 class=&#34;pt-5&#34;&gt;&lt;span&gt;About Us&lt;/span&gt;&lt;/h1&gt;&#xA;&#xA;&lt;p class=&#34;mb-5 w-75&#34;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sit, saepe? Rem, libero repellendus eum.&lt;/p&gt;&#xA;"
+                                          jcr:language="pt"
+                                          jcr:primaryType="jnt:translation"/>
+                        <j:translation_it body="&lt;h1 class=&#34;pt-5&#34;&gt;&lt;span&gt;About Us&lt;/span&gt;&lt;/h1&gt;&#xA;&#xA;&lt;p class=&#34;mb-5 w-75&#34;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sit, saepe? Rem, libero repellendus eum.&lt;/p&gt;&#xA;"
+                                          jcr:language="it"
+                                          jcr:primaryType="jnt:translation"/>
+                        <j:translation_fr body="&lt;h1 class=&#34;pt-5&#34;&gt;&lt;span&gt;About Us&lt;/span&gt;&lt;/h1&gt;&#xA;&#xA;&lt;p class=&#34;mb-5 w-75&#34;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sit, saepe? Rem, libero repellendus eum.&lt;/p&gt;&#xA;"
+                                          jcr:language="fr"
+                                          jcr:primaryType="jnt:translation"/>
+                        <j:translation_da body="&lt;h1 class=&#34;pt-5&#34;&gt;&lt;span&gt;About Us&lt;/span&gt;&lt;/h1&gt;&#xA;&#xA;&lt;p class=&#34;mb-5 w-75&#34;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sit, saepe? Rem, libero repellendus eum.&lt;/p&gt;&#xA;"
+                                          jcr:language="da"
+                                          jcr:primaryType="jnt:translation"/>
+                        <j:translation_es body="&lt;h1 class=&#34;pt-5&#34;&gt;&lt;span&gt;About Us&lt;/span&gt;&lt;/h1&gt;&#xA;&#xA;&lt;p class=&#34;mb-5 w-75&#34;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sit, saepe? Rem, libero repellendus eum.&lt;/p&gt;&#xA;"
+                                          jcr:language="es"
+                                          jcr:primaryType="jnt:translation"/>
+                        <j:translation_de_DE body="&lt;h1 class=&#34;pt-5&#34;&gt;&lt;span&gt;About Us&lt;/span&gt;&lt;/h1&gt;&#xA;&#xA;&lt;p class=&#34;mb-5 w-75&#34;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sit, saepe? Rem, libero repellendus eum.&lt;/p&gt;&#xA;"
+                                             jcr:language="de_DE"
+                                             jcr:primaryType="jnt:translation"/>
+                     </heading>
+                  </heading-content-list>
+                  <layout-and-grid grid="3_9"
+                                   gridLayout="fixed-width"
+                                   jcr:mixinTypes="bootstrap4mix:createContainer bootstrap4mix:createRow bootstrap4mix:createSection bootstrap4mix:predefinedGrid"
+                                   jcr:primaryType="bootstrap4nt:grid"
+                                   rowHorizontalAlignment="default"
+                                   rowVerticalAlignment="default"
+                                   sectionElement="section"
+                                   typeOfGrid="predefinedGrid">
+                     <layout-and-grid-side jcr:primaryType="jnt:contentList">
+                        <main-resource-display j:mainResourceView="moviefacts"
+                                               jcr:primaryType="jnt:mainResourceDisplay"/>
+                     </layout-and-grid-side>
+                     <layout-and-grid-main jcr:primaryType="jnt:contentList">
+                        <main-resource-display j:mainResourceView="maindetails"
+                                               jcr:primaryType="jnt:mainResourceDisplay"/>
+                        <commentable jcr:primaryType="jnt:addComment"/>
+                        <display-comments jcr:primaryType="jnt:commentsList"/>
+                     </layout-and-grid-main>
+                  </layout-and-grid>
+               </pagecontent>
+            </movie-template>
+            <movieslist-template j:applyOn="jnt:moviesList"
+                                 j:defaultTemplate="true"
+                                 j:hiddenTemplate="false"
+                                 j:priority="2"
+                                 jcr:primaryType="jnt:contentTemplate">
+               <j:translation_en jcr:language="en"
+                                 jcr:mixinTypes="mix:title"
+                                 jcr:primaryType="jnt:translation"
+                                 jcr:title="movieslist-template"/>
+               <pagecontent jcr:primaryType="jnt:contentList">
+                  <layout-and-grid gridLayout="fixed-width"
+                                   jcr:mixinTypes="bootstrap4mix:createContainer bootstrap4mix:createRow bootstrap4mix:createSection"
+                                   jcr:primaryType="bootstrap4nt:grid"
+                                   rowHorizontalAlignment="default"
+                                   rowVerticalAlignment="default"
+                                   sectionElement="section"
+                                   typeOfGrid="nogrid">
+                     <layout-and-grid jcr:primaryType="jnt:contentList">
+                        <main-resource-display j:mainResourceView="maindetails"
+                                               jcr:primaryType="jnt:mainResourceDisplay"/>
+                        <commentable jcr:primaryType="jnt:addComment"/>
+                        <display-comments jcr:primaryType="jnt:commentsList"/>
+                     </layout-and-grid>
+                  </layout-and-grid>
+               </pagecontent>
+            </movieslist-template>
+         </templates>
+      </smo-custom>
+   </modules>
+</content>
