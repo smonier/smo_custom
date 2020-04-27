@@ -9,6 +9,9 @@
 <template:addResources type="javascript" resources="popper.min.js"/>
 <template:addResources type="javascript" resources="bootstrap.min.js"/>
 
+<c:set var="site" value="${renderContext.site.title}"/>
+<c:set var="redirect" value="${currentResource.moduleParams.redirect}"/>
+<c:set var="failureRedirect" value="${currentResource.moduleParams.failureRedirect}"/>
 
 <c:if test="${jcr:isNodeType(currentNode, 'smomix:featuredMenu')}">
     <c:set var="buttonClass" value="${currentNode.properties.buttonClass.string}"/>

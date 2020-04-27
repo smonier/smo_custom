@@ -7,6 +7,10 @@
 <%--@elvariable id="currentUser" type="org.jahia.services.usermanager.JahiaUser"--%>
 <%--@elvariable id="renderContext" type="org.jahia.services.render.RenderContext"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
+<c:set var="site" value="${renderContext.site.title}"/>
+<c:set var="redirect" value="${currentResource.moduleParams.redirect}"/>
+<c:set var="failureRedirect" value="${currentResource.moduleParams.failureRedirect}"/>
+
 <c:set var="loginMenuULClass" value="${currentNode.properties.loginMenuULClass.string}"/>
 <c:if test="${empty loginMenuULClass}">
     <c:set var="loginMenuULClass" value="navbar-nav flex-row ml-md-auto d-none d-md-flex"/>
@@ -49,12 +53,9 @@
         </ul>
     </c:when>
     <c:otherwise>
-        <ul class="${loginMenuULClass}">
-            <li class="nav-item">
-                <a class="nav-link p-2 login" href="${url.login}" >
-                    <fmt:message key="bootstrap4mix_customBaseNavbar.label.login"/>
-                </a>
-            </li>
-        </ul>
+        <template:include view="hidden.megaMenu.modal.login">
+            <template:param name="redirect" value="${redirect}"/>
+            <template:param name="failureRedirect" value="${failureRedirect}"/>
+        </template:include>
     </c:otherwise>
 </c:choose>

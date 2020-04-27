@@ -10,7 +10,7 @@
 <template:addResources type="javascript" resources="popper.min.js"/>
 <template:addResources type="javascript" resources="bootstrap.min.js"/>
 
-<template:addResources type="css" resources="megaMenu.scss"/>
+<template:addResources type="css" resources="megaMenu.scss" media="screen"/>
 
 <c:set var="siteNode" value="${renderContext.site}"/>
 <c:choose>
@@ -82,6 +82,8 @@
         </c:otherwise>
     </c:choose>
 
+
+
     <a class="navbar-brand" href="${rootNodeUrl}">
         <c:if test="${! empty brandImage}">
             <c:url var="brandImageUrl" value="${brandImage.url}"/>
@@ -96,10 +98,18 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
+    <c:url var="redirect" value="${rootNode.url}"/>
+    <c:url var="failureRedirect" value="${rootNode.url}"/>
+
     <div class="${divClass}" id="navbar-${currentNode.identifier}">
         <template:include view="megaMenu.basenav"/>
         <c:if test="${addLoginButton}">
-            <template:include view="hidden.megaMenu.login"/>
+            <template:include view="hidden.megaMenu.login">
+                <template:param name="divClass" value="${divClass}"/>
+                <template:param name="addLoginButton" value="${addLoginButton}"/>
+                <template:param name="redirect" value="${redirect}"/>
+                <template:param name="failureRedirect" value="${failureRedirect}"/>
+            </template:include>
         </c:if>
     </div>
     <c:if test="${addContainerWithinTheNavbar}">

@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1587906354106
+Bnd-LastModified: 1587978080740
 Build-Jdk: 11.0.2
 Built-By: stephanemonier
 Bundle-Category: jahia-module
@@ -90,9 +90,9 @@ Jahia-GroupId: org.jahia.modules
 Jahia-Module-Type: module
 Jahia-Required-Version: 7.3.3.0
 Jahia-Source-Control-Connection: scm:git:git@github.com:smonier/smo_cust
- om_modules.git
+ om.git
 Jahia-Source-Control-DeveloperConnection: scm:git:git@github.com:smonier
- /smo_custom_modules.git
+ /smo_custom.git
 Jahia-Source-Control-Tag: HEAD
 Jahia-Source-Folders: /Users/stephanemonier/Runtimes/DX7.3.3.0/digital-f
  actory-data/sources/smo-custom
