@@ -13,7 +13,7 @@ $theme-colors: (
     box-shadow: none;
 
 }
-.card {
+.newsCard {
     font-size: 1em;
     overflow: hidden;
     padding: 5px;
@@ -22,41 +22,6 @@ $theme-colors: (
     box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
     margin-top:20px;
 }
-ol.carousel-indicators {
-    position: relative;
-    justify-content: right;
-    margin-left: 12px;
-    margin-right: 12px;
-}
-
-ol.carousel-indicators li {
-    border-radius: 25px;
-    width: 10px;
-    height: 10px;
-    background-color: #404040;
-    -moz-border-radius-topleft: 5px;
-    -moz-border-radius-bottomleft: 5px;
-
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-
-}
-
-ol.carousel-indicators .active {
-    background-color: #FF8201;
-    max-width: 10px;
-    margin: 0 3px;
-    height: 10px;
-}
-
-.carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
-}
-
-.carousel-control-next-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
-}
-
 
 .btn {
     margin-top: auto;
