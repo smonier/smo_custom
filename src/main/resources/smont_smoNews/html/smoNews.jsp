@@ -83,7 +83,7 @@
                 </c:forEach>
                 <ol class="carousel-indicators" style="justify-content: flex-end;">
                     <c:forEach items="${galleryImgs}" var="galImage" varStatus="status">
-                        <li data-target="#${carouselId}" data-slide-to="${status.index}" class="rounded-circle ${status.first?' active':''}"></li>
+                        <li data-target="#${carouselId}" data-slide-to="${status.index}" class="${status.first?' active':''}"></li>
                     </c:forEach>
 
                 </ol>

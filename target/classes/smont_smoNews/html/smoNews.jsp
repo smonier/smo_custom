@@ -24,6 +24,8 @@
 <jcr:nodeProperty node="${currentNode}" name="desc" var="newsBody"/>
 <jcr:nodeProperty node="${currentNode}" name="date" var="newsDate"/>
 <jcr:nodeProperty node="${currentNode}" name="buttonText" var="newsButtonText"/>
+<jcr:nodeProperty node="${currentNode}" name="featured" var="featured"/>
+
 <c:set var="galleryImgs" value="${currentNode.properties['smoGalleryImg']}"/>
 
 <c:set var="rand">
@@ -32,7 +34,7 @@
 <c:set var="carouselId" value="carousel-${rand}"/>
 
 <!-- Card Start -->
-<div class="card pt-2">
+<div class="newsCard pt-2">
     <div class="row ">
 
         <div class="col-md-7 px-3">
@@ -81,7 +83,7 @@
                 </c:forEach>
                 <ol class="carousel-indicators" style="justify-content: flex-end;">
                     <c:forEach items="${galleryImgs}" var="galImage" varStatus="status">
-                        <li data-target="#${carouselId}" data-slide-to="${status.index}" class="rounded-circle ${status.first?' active':''}"></li>
+                        <li data-target="#${carouselId}" data-slide-to="${status.index}" class="${status.first?' active':''}"></li>
                     </c:forEach>
 
                 </ol>

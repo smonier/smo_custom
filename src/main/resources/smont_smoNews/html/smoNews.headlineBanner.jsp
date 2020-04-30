@@ -55,7 +55,7 @@
     <div class="position-relative">
         <!--thumbnail img-->
         <div class="ratio_right-cover-2 image-wrapper">
-            <c:forEach items="${galleryImgs}" var="galImage" varStatus="status">
+            <c:forEach items="${galleryImgs}" var="galImage" varStatus="status"  begin="0" end="0">
                 <a href="${linkUrl}">
                     <img class="img-fluid" src="${galImage.node.url}" alt="${galImage.node.name}">
                 </a>

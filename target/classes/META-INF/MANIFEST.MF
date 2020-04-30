@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1587978080740
+Bnd-LastModified: 1588252237688
 Build-Jdk: 11.0.2
 Built-By: stephanemonier
 Bundle-Category: jahia-module
@@ -46,43 +46,45 @@ Import-Package: graphql.annotations.annotationTypes,graphql.schema;resol
  a.modules.graphql.provider.dxm.node,org.jahia.modules.graphql.provider.
  dxm.sdl.extension,org.jahia.modules.graphql.provider.dxm.sdl.fetchers;r
  esolution:=optional,org.jahia.services.content,org.jahia.services.conte
- nt.decorator;resolution:=optional,org.slf4j;resolution:=optional;versio
- n="[1.6,2)",javax.servlet.http;version="[3.0,4)",org.apache.commons.id;
- resolution:=optional,org.apache.commons.lang;version="[2.6,3)",org.apac
- he.commons.lang.math;version="[2.6,3)",org.apache.naming.java,org.apach
- e.taglibs.standard.functions;resolution:=optional,org.apache.taglibs.st
- andard.tag.common.core;resolution:=optional,org.apache.taglibs.standard
- .tag.rt.core;resolution:=optional,org.apache.taglibs.standard.tag.rt.fm
- t;resolution:=optional,org.apache.taglibs.standard.tei;resolution:=opti
- onal,org.apache.taglibs.unstandard;resolution:=optional;version="[7.3,8
- )",org.jahia.data.viewhelper.principal;resolution:=optional,org.jahia.d
- efaults.config.spring,org.jahia.exceptions,org.jahia.modules.graphql.pr
- ovider.dxm.relay,org.jahia.services,org.jahia.services.content.nodetype
- s;resolution:=optional,org.jahia.services.render,org.jahia.services.ren
- der.scripting,org.jahia.services.search,org.jahia.services.seo;resoluti
- on:=optional,org.jahia.services.sites,org.jahia.services.usermanager,or
- g.jahia.settings;resolution:=optional,org.jahia.taglibs;resolution:=opt
- ional;version="[7.3,8)",org.jahia.taglibs.functions;version="[7.3,8)",o
- rg.jahia.taglibs.internal.date;resolution:=optional;version="[7.3,8)",o
- rg.jahia.taglibs.jcr;resolution:=optional;version="[7.3,8)",org.jahia.t
- aglibs.jcr.node;version="[7.3,8)",org.jahia.taglibs.jcr.query;version="
- [7.3,8)",org.jahia.taglibs.query;version="[7.3,8)",org.jahia.taglibs.se
- arch;version="[7.3,8)",org.jahia.taglibs.search.facets;version="[7.3,8)
- ",org.jahia.taglibs.template;version="[7.3,8)",org.jahia.taglibs.templa
- te.gwt;version="[7.3,8)",org.jahia.taglibs.template.include;version="[7
- .3,8)",org.jahia.taglibs.template.layoutmanager;version="[7.3,8)",org.j
- ahia.taglibs.template.pager;version="[7.3,8)",org.jahia.taglibs.uicompo
- nents;version="[7.3,8)",org.jahia.taglibs.uicomponents.i18n;version="[7
- .3,8)",org.jahia.taglibs.uicomponents.image;version="[7.3,8)",org.jahia
- .taglibs.uicomponents.loginform;version="[7.3,8)",org.jahia.taglibs.uic
- omponents.portlets;version="[7.3,8)",org.jahia.taglibs.user;version="[7
- .3,8)",org.jahia.taglibs.utility;version="[7.3,8)",org.jahia.taglibs.ut
- ility.constants;version="[7.3,8)",org.jahia.taglibs.utility.i18n;versio
- n="[7.3,8)",org.jahia.taglibs.utility.session;version="[7.3,8)",org.jah
- ia.taglibs.utility.siteproperties;version="[7.3,8)",org.jahia.utils;res
- olution:=optional,org.springframework.web.servlet.tags;resolution:=opti
- onal,org.springframework.web.servlet.tags.form;resolution:=optional,org
- .springframework.webflow.execution;resolution:=optional
+ nt.decorator;resolution:=optional,org.jahia.services.content.nodetypes;
+ resolution:=optional,org.jahia.services.render,org.slf4j;resolution:=op
+ tional;version="[1.6,2)",org.jahia.services.content.nodetypes.initializ
+ ers,org.jahia.services.content.nodetypes.renderer,javax.servlet.http;ve
+ rsion="[3.0,4)",org.apache.commons.id;resolution:=optional,org.apache.c
+ ommons.lang;version="[2.6,3)",org.apache.commons.lang.math;version="[2.
+ 6,3)",org.apache.naming.java,org.apache.taglibs.standard.functions;reso
+ lution:=optional,org.apache.taglibs.standard.tag.common.core;resolution
+ :=optional,org.apache.taglibs.standard.tag.rt.core;resolution:=optional
+ ,org.apache.taglibs.standard.tag.rt.fmt;resolution:=optional,org.apache
+ .taglibs.standard.tei;resolution:=optional,org.apache.taglibs.unstandar
+ d;resolution:=optional;version="[7.3,8)",org.jahia.data.viewhelper.prin
+ cipal;resolution:=optional,org.jahia.defaults.config.spring,org.jahia.e
+ xceptions,org.jahia.modules.graphql.provider.dxm.relay,org.jahia.servic
+ es,org.jahia.services.render.scripting,org.jahia.services.search,org.ja
+ hia.services.seo;resolution:=optional,org.jahia.services.sites,org.jahi
+ a.services.usermanager,org.jahia.settings;resolution:=optional,org.jahi
+ a.taglibs;resolution:=optional;version="[7.3,8)",org.jahia.taglibs.func
+ tions;version="[7.3,8)",org.jahia.taglibs.internal.date;resolution:=opt
+ ional;version="[7.3,8)",org.jahia.taglibs.jcr;resolution:=optional;vers
+ ion="[7.3,8)",org.jahia.taglibs.jcr.node;version="[7.3,8)",org.jahia.ta
+ glibs.jcr.query;version="[7.3,8)",org.jahia.taglibs.query;version="[7.3
+ ,8)",org.jahia.taglibs.search;version="[7.3,8)",org.jahia.taglibs.searc
+ h.facets;version="[7.3,8)",org.jahia.taglibs.template;version="[7.3,8)"
+ ,org.jahia.taglibs.template.gwt;version="[7.3,8)",org.jahia.taglibs.tem
+ plate.include;version="[7.3,8)",org.jahia.taglibs.template.layoutmanage
+ r;version="[7.3,8)",org.jahia.taglibs.template.pager;version="[7.3,8)",
+ org.jahia.taglibs.uicomponents;version="[7.3,8)",org.jahia.taglibs.uico
+ mponents.i18n;version="[7.3,8)",org.jahia.taglibs.uicomponents.image;ve
+ rsion="[7.3,8)",org.jahia.taglibs.uicomponents.loginform;version="[7.3,
+ 8)",org.jahia.taglibs.uicomponents.portlets;version="[7.3,8)",org.jahia
+ .taglibs.user;version="[7.3,8)",org.jahia.taglibs.utility;version="[7.3
+ ,8)",org.jahia.taglibs.utility.constants;version="[7.3,8)",org.jahia.ta
+ glibs.utility.i18n;version="[7.3,8)",org.jahia.taglibs.utility.session;
+ version="[7.3,8)",org.jahia.taglibs.utility.siteproperties;version="[7.
+ 3,8)",org.jahia.utils;resolution:=optional,org.springframework.web.serv
+ let.tags;resolution:=optional,org.springframework.web.servlet.tags.form
+ ;resolution:=optional,org.springframework.webflow.execution;resolution:
+ =optional
 Jahia-Depends: bootstrap4-components,bootstrap4-core,cloudinary-integrat
  ion,default
 Jahia-Download-Sources-Available: true
@@ -100,11 +102,13 @@ Jahia-Static-Resources: /css,/icons,/images,/img,/javascript
 Provide-Capability: com.jahia.services.content;nodetypes:List<String>="c
  ldin:configuration,cldin:imageOption,cldin:settings,smomix:externalLink
  ,smomix:featuredMenu,smomix:internalLink,smomix:linkTo,smomix:smoCompon
- ent,smont:blockExternalLink,smont:blockInternalLink,smont:dashboardBann
- erVideo,smont:homeBannerVideo,smont:linksBlock,smont:smoExternalVideo,s
- mont:smoFreeBlock,smont:smoGalleryImg,smont:smoInternalVideo,smont:smoN
- ews,smont:standardCard",com.jahia.modules.dependencies;moduleIdentifier
- =smo-custom,com.jahia.modules.dependencies;moduleIdentifier=smo-custom
+ ent,smomix:socialIcons,smont:allNewsPanel,smont:blockExternalLink,smont
+ :blockInternalLink,smont:dashboardBannerVideo,smont:homeBannerVideo,smo
+ nt:linksBlock,smont:newsHeadlineBanner,smont:personCard,smont:smoExtern
+ alVideo,smont:smoFreeBlock,smont:smoGalleryImg,smont:smoInternalVideo,s
+ mont:smoNews,smont:standardCard",com.jahia.modules.dependencies;moduleI
+ dentifier=smo-custom,com.jahia.modules.dependencies;moduleIdentifier=sm
+ o-custom
 Require-Capability: com.jahia.services.content;filter:="(nodetypes=boots
  trap4mix:advancedNavbar)",com.jahia.services.content;filter:="(nodetype
  s=bootstrap4mix:brand)",com.jahia.services.content;filter:="(nodetypes=

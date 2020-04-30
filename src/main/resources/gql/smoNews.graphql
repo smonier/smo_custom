@@ -1,0 +1,42 @@
+{
+    jcr(workspace: LIVE) {
+        nodesByQuery(query: "select * from [smont:smoNews]", offset: 0) {
+            edges {
+                index
+                node {
+                    displayName(language: "en")
+                    description: property(language: "en", name: "desc") {
+                        value
+                    }
+                    date: property(language: "en", name: "date") {
+                        value
+                    }
+                    featured: property(language: "en", name: "featured") {
+                        value
+                    }
+                    buttonText: property(language: "en", name: "buttonText") {
+                        value
+                    }
+                    images: property(language: "en", name: "smoGalleryImg") {
+                        image: refNodes {
+                            path
+                            name
+                        }
+                    }
+                    categories: property(language: "en", name: "j:defaultCategory") {
+                        refNodes {
+                            path
+                            name
+                        }
+                    }
+                    tags: property(name: "j:tagList") {
+                        values
+                    }
+                    interests: property(name: "wem:interests") {
+                        values
+                    }
+                }
+            }
+        }
+    }
+}

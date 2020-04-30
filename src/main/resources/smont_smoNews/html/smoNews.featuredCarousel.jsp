@@ -52,9 +52,10 @@
     <div class="position-relative">
         <!--thumbnail img-->
         <div class="ratio_left-cover-1 image-wrapper">
-            <c:forEach items="${galleryImgs}" var="galImage" varStatus="status">
+            <c:forEach items="${galleryImgs}" var="galImage" varStatus="status" begin="0" end="0">
+
                 <img class="img-fluid w-100" src="${galImage.node.url}" alt="${galImage.node.name}">
-                </c:forEach>
+            </c:forEach>
 
         </div>
         <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">

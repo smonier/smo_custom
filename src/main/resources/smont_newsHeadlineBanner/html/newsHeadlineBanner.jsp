@@ -54,7 +54,7 @@
                             <c:set var="featuredIndex" value="0" scope="page"/>
                             <c:forEach items="${newsList}" var="news" varStatus="status">
                                 <c:if test="${news.properties['featured'].boolean}">
-                                    <li data-target="#${carouselId}" data-slide-to="${featuredIndex}" class="rounded-circle ${status.first?' active':''}"></li>
+                                    <li data-target="#${carouselId}" data-slide-to="${featuredIndex}" class="${status.first?' active':''}"></li>
                                     <c:set var="featuredIndex" value="${featuredIndex + 1}" scope="page"/>
                                 </c:if>
                             </c:forEach>

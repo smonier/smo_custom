@@ -113,3 +113,8 @@
 [smont:newsHeadlineBanner] > jnt:content, mix:title, smomix:smoComponent, jmix:list
  - bannerText (string, richtext) internationalized
  + * (smont:smoNews)
+
+
+[smont:allNewsPanel] > jnt:content, mix:title, smomix:smoComponent, jmix:list
+- newsPanelDesc (string, richtext) internationalized
+

@@ -37,12 +37,7 @@
                         </c:if>
                         <c:if test="${! renderContext.editMode && jcr:hasPermission(renderContext.mainResource.node, 'editModeAccess')}">
                             <a href="<c:url value='${url.edit}'/>" class="dropdown-item">
-                                <fmt:message key="bootstrap4mix_customBaseNavbar.label.edit"/>
-                            </a>
-                        </c:if>
-                        <c:if test="${! renderContext.editMode && !jcr:hasPermission(renderContext.mainResource.node, 'editModeAccess') && jcr:hasPermission(renderContext.mainResource.node, 'contributeModeAccess')}">
-                            <a href="<c:url value='${url.contribute}'/>" class="dropdown-item">
-                                <fmt:message key="bootstrap4mix_customBaseNavbar.label.contribute"/>
+                                <fmt:message key="magaMenuNavbar.label.edit"/>
                             </a>
                         </c:if>
                     </c:if>

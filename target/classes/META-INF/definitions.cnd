@@ -16,6 +16,7 @@
  - desc (string, richtext) internationalized
  - date (date) = now()
  - buttonText (string) internationalized
+ - featured (boolean)
  - smoGalleryImg (weakreference, picker[type='image']) multiple i18n
 
 //*** CONTENT LINKER //
@@ -90,3 +91,30 @@
  - featuredTitle (string) i18n
  - featuredImage (weakreference, picker[type='image']) < 'jmix:image'
  - featuredText (string, richtext) internationalized
+
+[smomix:socialIcons] mixin
+ extends = smont:personCard
+ itemtype = content
+ - facebook (string) = 'https://'
+ - linkedIn (string) = 'https://'
+ - twitter (string) = 'https://'
+ - googlePlus (string) = 'https://'
+
+[smont:personCard] > jnt:content, mix:title, smomix:smoComponent
+ - jcr:title (string) internationalized
+ - personBio (string, richtext) internationalized
+ - personEmail (string) internationalized
+ - personPortrait (weakreference, picker[type='image']) < 'jmix:image'
+ - featuredImage (weakreference, picker[type='image']) < 'jmix:image'
+ - personTitle (string) internationalized
+ - personHeadline (string) internationalized
+ - rotation (string, choicelist[resourceBundle]) = Auto autocreated indexed=no < 'Auto', 'Manual'
+
+[smont:newsHeadlineBanner] > jnt:content, mix:title, smomix:smoComponent, jmix:list
+ - bannerText (string, richtext) internationalized
+ + * (smont:smoNews)
+
+
+[smont:allNewsPanel] > jnt:content, mix:title, smomix:smoComponent, jmix:list
+- newsPanelDesc (string, richtext) internationalized
+
