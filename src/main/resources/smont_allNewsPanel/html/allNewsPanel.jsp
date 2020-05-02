@@ -88,17 +88,19 @@
 
 
 // Gallery Item //
+            output += '<div class="card">'
             output += '<a href="#portfolioModal' + i + '" class="portfolio-link" data-toggle="modal">';
             output += '<div class="portfolio-hover">';
             output += ' <div class="portfolio-hover-content">';
             output += '<i class="fa fa-search-plus"></i>';
             output += '</div>';
             output += '</div>';
-            output += '<img class="card-img d-block" src="' + imagePath + '"  alt="">';
+            output += '<img class="card-img-top d-block" src="' + imagePath + '"  alt="">';
             output += '</a>';
             output += '<div class="portfolio-caption">';
             output += '<h4>' + newsTitle + '</h4>';
             output += '<p class="text-muted">' + categories + '</p>';
+            output += '</div>';
             output += '</div>';
 
 
@@ -133,6 +135,7 @@
             var newNode = document.createElement("DIV");
             newNode.classList.add("col-md-4");
             newNode.classList.add("col-sm-6");
+            newNode.classList.add("align-items-stretch");
             newNode.classList.add("portfolio-item");
             if (newsArray[i].node.categories !== null) {
                 var catArr = newsArray[i].node.categories.refNodes;

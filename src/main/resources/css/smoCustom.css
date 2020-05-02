@@ -6,7 +6,7 @@
     outline: 0 !important;
 }
 /* entire container, keeps perspective */
-.card-container {
+.rotatingCard-container {
     -webkit-perspective: 800px;
     -moz-perspective: 800px;
     -o-perspective: 800px;
@@ -14,8 +14,8 @@
     margin-bottom: 30px;
 }
 /* flip the pane when hovered */
-.card-container:not(.manual-flip):hover .card,
-.card-container.hover.manual-flip .card{
+.rotatingCard-container:not(.manual-flip):hover .rotatingCard,
+.rotatingCard-container.hover.manual-flip .rotatingCard{
     -webkit-transform: rotateY( 180deg );
     -moz-transform: rotateY( 180deg );
     -o-transform: rotateY( 180deg );
@@ -23,15 +23,15 @@
 }
 
 
-.card-container.static:hover .card,
-.card-container.static.hover .card {
+.rotatingCard-container.static:hover .rotatingCard,
+.rotatingCard-container.static.hover .rotatingCard {
     -webkit-transform: none;
     -moz-transform: none;
     -o-transform: none;
     transform: none;
 }
 /* flip speed goes here */
-.card {
+.rotatingCard {
     -webkit-transition: -webkit-transform .5s;
     -moz-transition: -moz-transform .5s;
     -o-transition: -o-transform .5s;
@@ -78,27 +78,27 @@
 /*        Style       */
 
 
-.card{
+.rotatingCard{
     background: none repeat scroll 0 0 #FFFFFF;
     border-radius: 4px;
     color: #444444;
 }
-.card-container, .front, .back {
+.rotatingCard-container, .front, .back {
     width: 100%;
     border-radius: 4px;
     -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
     -moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
     box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
 }
-.card .cover{
+.rotatingCard .cover{
     height: 105px;
     overflow: hidden;
     border-radius: 4px 4px 0 0;
 }
-.card .cover img{
+.rotatingCard .cover img{
     width: 100%;
 }
-.card .user{
+.rotatingCard .user{
     border-radius: 50%;
     display: block;
     height: 120px;
@@ -106,24 +106,24 @@
     overflow: hidden;
     width: 120px;
 }
-.card .user img{
+.rotatingCard .user img{
     background: none repeat scroll 0 0 #FFFFFF;
     border: 4px solid #FFFFFF;
     width: 100%;
 }
 
-.card .content{
+.rotatingCard .content{
     background-color: rgba(0, 0, 0, 0);
     box-shadow: none;
     padding: 10px 20px 20px;
 }
-.card .content .main {
+.rotatingCard .content .main {
     min-height: 160px;
 }
-.card .back .content .main {
+.rotatingCard .back .content .main {
   /*  height: 215px;*/
 }
-.card .name {
+.rotatingCard .name {
     font-family: 'Arima Madurai', cursive;
     font-size: 22px;
     line-height: 28px;
@@ -131,37 +131,37 @@
     text-align: center;
     text-transform: capitalize;
 }
-.card h5{
+.rotatingCard h5{
     margin: 5px 0;
     font-weight: 400;
     line-height: 20px;
 }
-.card .profession{
+.rotatingCard .profession{
     color: #999999;
     text-align: center;
     margin-bottom: 20px;
 }
-.card .footer {
+.rotatingCard .footer {
     border-top: 1px solid #EEEEEE;
     color: #999999;
     margin: 30px 0 0;
     padding: 10px 0 0;
     text-align: center;
 }
-.card .footer .social-links{
+.rotatingCard .footer .social-links{
     font-size: 18px;
 }
-.card .footer .social-links a{
+.rotatingCard .footer .social-links a{
     margin: 0 7px;
 }
-.card .footer .btn-simple{
+.rotatingCard .footer .btn-simple{
     margin-top: -6px;
 }
-.card .header {
+.rotatingCard .header {
     padding: 15px 20px;
     height: 90px;
 }
-.card .motto{
+.rotatingCard .motto{
     font-family: 'Arima Madurai', cursive;
     border-bottom: 1px solid #EEEEEE;
     color: #999999;
@@ -171,29 +171,29 @@
     text-align: center;
 }
 
-.card .stats-container{
+.rotatingCard .stats-container{
     width: 100%;
     margin-top: 50px;
 }
-.card .stats{
+.rotatingCard .stats{
     display: block;
     float: left;
     width: 33.333333%;
     text-align: center;
 }
 
-.card .stats:first-child{
+.rotatingCard .stats:first-child{
     border-right: 1px solid #EEEEEE;
 }
-.card .stats:last-child{
+.rotatingCard .stats:last-child{
     border-left: 1px solid #EEEEEE;
 }
-.card .stats h4{
+.rotatingCard .stats h4{
     font-family: 'Arima Madurai', cursive;
     font-weight: 300;
     margin-bottom: 5px;
 }
-.card .stats p{
+.rotatingCard .stats p{
     color: #777777;
 }
 /*      Just for presentation        */
@@ -312,8 +312,8 @@ pre.prettyprint{
     .front{
         z-index: 4;
     }
-    .card-container:not(.manual-flip):hover .back,
-    .card-container.manual-flip.hover .back{
+    .rotatingCard-container:not(.manual-flip):hover .back,
+    .rotatingCard-container.manual-flip.hover .back{
         z-index: 5;
         visibility: visible;
     }
@@ -346,7 +346,7 @@ pre.prettyprint{
 .btn-floating i {
     display: inline-block;
     width: inherit;
-    color: #fff;
+  /*  color: #fff;*/
     text-align: center
 }
 

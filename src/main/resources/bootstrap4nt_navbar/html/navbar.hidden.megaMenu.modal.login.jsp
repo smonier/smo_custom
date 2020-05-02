@@ -49,7 +49,7 @@
 
 <div class="modal modal-nest fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true" <c:if test="${showModal}">data-show='true'</c:if>>
     <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+        <div class="loginModal-content">
 
 
             <div class="modal-body justify-content-center">

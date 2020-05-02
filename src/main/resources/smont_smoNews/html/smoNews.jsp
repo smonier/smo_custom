@@ -44,6 +44,8 @@
                     ${functions:abbreviate(functions:removeHtmlTags(newsBody.string),400,450,'...')}
                 </p>
                 <br/>
+                <c:if test="${not empty newsButtonText}">
+
                 <c:set var="linkType" value="${currentNode.properties.linkType.string}" />
                 <c:set var="linkTarget" value="${currentNode.properties.linkTarget.string}" />
 
@@ -63,9 +65,9 @@
                         <c:url var="linkUrl" value="${currentNode.url}"/>
                    </c:when>
                 </c:choose>
-                <a href="${linkUrl}" class="mt-auto btn btn-primary" target="${linkTarget}">${newsButtonText.string}</a>
+                <a href="${linkUrl}" class="mt-auto btn btn-primary text-right" target="${linkTarget}">${newsButtonText.string}</a>
                 <br/>
-
+                </c:if>
             </div>
 
         </div>

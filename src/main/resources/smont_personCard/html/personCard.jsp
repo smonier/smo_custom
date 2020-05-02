@@ -27,7 +27,7 @@
     });
 
     function rotateCard(btn){
-        var $card = $(btn).closest('.card-container');
+        var $card = $(btn).closest('.rotatingCard-container');
         console.log($card);
         if($card.hasClass('hover')){
             $card.removeClass('hover');
@@ -61,8 +61,8 @@
     </c:when>
 </c:choose>
 
-<div class="card-container ${rotationClass}">
-    <div class="card">
+<div class="rotatingCard-container ${rotationClass}">
+    <div class="rotatingCard">
         <div class="front">
             <div>
                 <img class="card-img-top" src="${featuredImage.node.url}" alt="${featuredImage.node.name}"/>
@@ -71,7 +71,7 @@
                 <img class="rounded-circle" src="${personPortrait.node.url}" alt="${fullName.string}"/>
             </div>
 
-            <div class="card-text">
+            <div class="rotatingCard-text">
                 <div class="main">
                     <h3 class="name">${fullName.string}</h3>
                     <p class="profession">${personTitle.string}</p>

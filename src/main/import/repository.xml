@@ -24,10 +24,9 @@
                            <mainContent.card.jsp jcr:primaryType="jnt:viewFile"/>
                         </html>
                      </jnt_mainContent>
-                     <META-INF jcr:mixinTypes="jmix:hasExternalProviderExtension jmix:sourceControl"
+                     <META-INF jcr:mixinTypes="jmix:hasExternalProviderExtension"
                                jcr:primaryType="jnt:metaInfFolder">
-                        <definitions.cnd jcr:mixinTypes="jmix:sourceControl"
-                                         jcr:primaryType="jnt:definitionFile"/>
+                        <definitions.cnd jcr:primaryType="jnt:definitionFile"/>
                      </META-INF>
                      <jnt_news jcr:mixinTypes="jmix:hasExternalProviderExtension jmix:sourceControl"
                                jcr:primaryType="jnt:nodeTypeFolder"
